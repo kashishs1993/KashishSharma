@@ -13,7 +13,6 @@
       referrerpolicy="no-referrer"
     />
     <style>
-      /* Global Styles */
       body {
         font-family: "Segoe UI", Arial, sans-serif;
         margin: 0;
@@ -31,7 +30,7 @@
       h1,
       h2,
       h3 {
-        color: #1a3d7c; /* Accent color */
+        color: #1a3d7c;
       }
 
       a {
@@ -43,7 +42,6 @@
         text-decoration: underline;
       }
 
-      /* Header */
       header {
         text-align: center;
         padding: 40px 20px;
@@ -71,7 +69,6 @@
         color: #0c52c7;
       }
 
-      /* Sections */
       .section {
         margin-bottom: 50px;
       }
@@ -82,7 +79,6 @@
         padding-bottom: 8px;
       }
 
-      /* Card style */
       .card {
         background: #fff;
         border-radius: 10px;
@@ -97,7 +93,6 @@
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
       }
 
-      /* Skills */
       .skill-tag {
         display: inline-block;
         margin: 6px;
@@ -112,7 +107,6 @@
         color: #1a73e8;
       }
 
-      /* Contact */
       .contact p {
         margin: 10px 0;
         font-size: 1.05em;
@@ -123,7 +117,6 @@
         color: #1a73e8;
       }
 
-      /* Footer */
       footer {
         margin-top: 50px;
         text-align: center;
@@ -134,12 +127,10 @@
         border-top: 1px solid #ddd;
       }
 
-      /* Smooth scroll */
       html {
         scroll-behavior: smooth;
       }
 
-      /* Responsive */
       @media (max-width: 600px) {
         nav a {
           display: inline-block;
@@ -180,9 +171,10 @@
         </p>
       </div>
 
-      <!-- WORK -->
+      <!-- WORK EXPERIENCE -->
       <div class="section" id="work">
         <h2><i class="fas fa-briefcase"></i> Work Experience</h2>
+
         <div class="card">
           <h3>German Aerospace Center (DLR) – Bremerhaven, Germany</h3>
           <p>
@@ -191,18 +183,78 @@
           </p>
           <ul>
             <li>
-              Developed and implemented a VR application using the Unity engine.
+              Developed and implemented a VR application using the Unity engine,
+              enhancing visitor engagement with immersive experiences.
             </li>
-            <li>Implemented 3D modelling strategies with Blender.</li>
-            <li>Benchmarked rendering pipelines in Unity and Unreal Engine.</li>
+            <li>
+              Implemented 3D modelling strategies to improve simulator realism
+              with Blender.
+            </li>
+            <li>
+              Benchmarked photorealistic rendering pipelines in Unity and Unreal
+              Engine to generate synthetic maritime datasets.
+            </li>
             <li>
               Integrated YOLOv8 object detection to evaluate dataset
-              effectiveness.
+              effectiveness, achieving a 0.4% improvement in segmentation
+              accuracy with less than 2% synthetic imagery.
             </li>
-            <li>Presented peer-reviewed research at MARESEC 2024.</li>
+            <li>
+              Co-authored and presented peer-reviewed research at MARESEC 2024:
+              <em
+                >“Comparing Photorealism in Game Engines for Synthetic Maritime
+                Computer Vision Datasets.”</em
+              >
+            </li>
           </ul>
         </div>
-        <!-- Other experiences kept same as before... -->
+
+        <div class="card">
+          <h3>Yasuka Corporation – Mumbai, India</h3>
+          <p>
+            <strong>Assistant Systems Engineer</strong>
+            <em>[ 06/2018 – 08/2019 ]</em>
+          </p>
+          <ul>
+            <li>
+              Conducted comprehensive performance evaluation of Li-ion
+              batteries, reducing failure rates by 7%.
+            </li>
+            <li>
+              Provided technical support through troubleshooting, repairing, and
+              maintaining systems via remote and on-site interventions.
+            </li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Yasuka Corporation – Mumbai, India</h3>
+          <p><strong>Trainee</strong> <em>[ 08/2017 – 04/2018 ]</em></p>
+          <ul>
+            <li>
+              Redesigned and implemented a responsive website interface,
+              increasing user traffic by 20%.
+            </li>
+            <li>
+              Optimised the bulk mailing system, improving efficiency and
+              deliverability.
+            </li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Power Matrix Solutions Pvt. Ltd. (PMX) – Mumbai, India</h3>
+          <p>
+            <strong>Motion Graphics Designer</strong>
+            <em>[ 01/2017 – 06/2017 ]</em>
+          </p>
+          <ul>
+            <li>
+              Created engaging infographic videos showcasing the brand’s
+              products and services.
+            </li>
+          </ul>
+        </div>
       </div>
 
       <!-- QUALIFICATION -->
@@ -227,16 +279,58 @@
       <!-- PUBLICATIONS -->
       <div class="section" id="projects">
         <h2><i class="fas fa-book"></i> Publications</h2>
+
         <div class="card">
-          <h3>Comparing Photorealism in Game Engines...</h3>
+          <h3>
+            Comparing Photorealism in Game Engines for Synthetic Maritime
+            Computer Vision Datasets
+          </h3>
           <img
             src="/KashishSharma/comparison.webp"
             alt="Sample Images"
             style="max-width: 100%; border-radius: 8px; margin-bottom: 15px"
           />
-          <p>Led a comparative study on synthetic data generation...</p>
+          <p>
+            Led a scientific comparative study on synthetic data generation
+            using Unity and Unreal Engine for maritime computer vision. Designed
+            and executed a rigorous evaluation pipeline, demonstrating a 0.4%
+            improvement in instance segmentation with less than 2% synthetic
+            data using YOLOv8. Unity Engine outperformed Unreal by 0.5% mAP in
+            segmentation accuracy. Presented peer-reviewed results at the
+            MARESEC 2024 workshop, contributing to research on efficient
+            synthetic data utilization.
+          </p>
           <a href="https://zenodo.org/records/14214926" target="_blank"
             ><i class="fas fa-external-link-alt"></i> View on Zenodo</a
+          >
+        </div>
+
+        <div class="card">
+          <h3>Tiltification - An Accessible App to Popularize Sonification</h3>
+          <p>
+            Contributed to the Sensors and Signal Processing team in developing
+            Tiltification, a smartphone app that uses psychoacoustic
+            sonification to make data perception more intuitive. Focused on
+            enhancing accessibility and engagement through sensor-driven audio
+            feedback.
+          </p>
+          <a href="https://repository.gatech.edu" target="_blank"
+            ><i class="fas fa-external-link-alt"></i> View the Paper</a
+          >
+        </div>
+
+        <div class="card">
+          <h3>
+            Implementation of Alcohol and Collision Sensor in a Smart Helmet
+          </h3>
+          <p>
+            Developed a smart helmet prototype for motorcyclists integrating
+            alcohol detection and collision sensors using the ATMega32u4 chipset
+            and AI Thinker A7 GSM+GPS module. Designed to enable real-time
+            alerts and prompt emergency response in accident scenarios.
+          </p>
+          <a href="https://ieeexplore.ieee.org/document/8945979" target="_blank"
+            ><i class="fas fa-external-link-alt"></i> View on IEEE Explore</a
           >
         </div>
       </div>
@@ -244,6 +338,7 @@
       <!-- SKILLS -->
       <div class="section" id="skills">
         <h2><i class="fas fa-code"></i> Skills</h2>
+
         <div class="card skill-category">
           <h3><i class="fas fa-terminal"></i> Programming</h3>
           <p>
@@ -252,11 +347,12 @@
             <span class="skill-tag">Python</span>
           </p>
         </div>
+
         <div class="card skill-category">
           <h3><i class="fas fa-toolbox"></i> Tools</h3>
           <p>
-            <span class="skill-tag">Unity</span>
-            <span class="skill-tag">Unreal</span>
+            <span class="skill-tag">Unity Engine</span>
+            <span class="skill-tag">Unreal Engine</span>
             <span class="skill-tag">Blender</span>
             <span class="skill-tag">WebXR</span>
             <span class="skill-tag">AutoCAD</span>
@@ -264,15 +360,17 @@
             <span class="skill-tag">GitHub</span>
           </p>
         </div>
+
         <div class="card skill-category">
           <h3><i class="fas fa-paint-brush"></i> Creative Software</h3>
           <p>
-            <span class="skill-tag">Photoshop</span>
-            <span class="skill-tag">Lightroom</span>
-            <span class="skill-tag">After Effects</span>
+            <span class="skill-tag">Adobe Photoshop</span>
+            <span class="skill-tag">Adobe Lightroom</span>
+            <span class="skill-tag">Adobe After Effects</span>
             <span class="skill-tag">DaVinci Resolve</span>
           </p>
         </div>
+
         <div class="card skill-category">
           <h3><i class="fas fa-language"></i> Languages</h3>
           <p>
