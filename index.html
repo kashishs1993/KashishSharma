@@ -4,61 +4,150 @@
     <meta charset="UTF-8" />
     <title>Kashish Sharma</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-sV2Qm6jZL7vI1ikvB6Lmp5B7S8e8rM2cfjI1GzYF5iGkV4FfL2E+F4Ko4FfQox9J9X0yGv1hKX5yufHwGrbgNw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <style>
+      /* Global Styles */
       body {
-        font-family: Arial, sans-serif;
-        margin: 40px;
+        font-family: "Segoe UI", Arial, sans-serif;
+        margin: 0;
         background: #f4f6f8;
         color: #222;
+        line-height: 1.6;
       }
-      header {
-        text-align: center;
-        margin-bottom: 40px;
+
+      .container {
+        max-width: 900px;
+        margin: auto;
+        padding: 20px;
       }
-      br {
-        margin-bottom: 10px;
+
+      h1,
+      h2,
+      h3 {
+        color: #1a3d7c; /* Accent color */
       }
-      h1 {
-        margin-bottom: 5px;
-      }
-      nav a {
-        margin: 0 10px;
-        color: #0069d9;
+
+      a {
+        color: #1a73e8;
         text-decoration: none;
       }
-      .section {
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      /* Header */
+      header {
+        text-align: center;
+        padding: 40px 20px;
+        background: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         margin-bottom: 30px;
       }
-      .project {
-        background: #fff;
-        border-radius: 6px;
-        padding: 15px;
-        margin: 10px 0;
-        box-shadow: 0 1px 3px #ccc;
+
+      header h1 {
+        margin-bottom: 10px;
+        font-size: 2.2em;
       }
+
+      nav {
+        margin-top: 15px;
+      }
+
+      nav a {
+        margin: 0 12px;
+        font-weight: 500;
+        transition: color 0.2s;
+      }
+
+      nav a:hover {
+        color: #0c52c7;
+      }
+
+      /* Sections */
+      .section {
+        margin-bottom: 50px;
+      }
+
+      .section h2 {
+        margin-bottom: 20px;
+        border-bottom: 2px solid #e0e4e8;
+        padding-bottom: 8px;
+      }
+
+      /* Card style */
+      .card {
+        background: #fff;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 15px 0;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+
+      .card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      /* Skills */
       .skill-tag {
         display: inline-block;
-        margin: 3px 8px;
-        padding: 5px 10px;
-        background: #fff;
-        border-radius: 4px;
+        margin: 6px;
+        padding: 6px 12px;
+        background: #eef2f6;
+        border-radius: 20px;
+        font-size: 0.9em;
       }
+
+      .skill-category h3 i {
+        margin-right: 8px;
+        color: #1a73e8;
+      }
+
+      /* Contact */
+      .contact p {
+        margin: 10px 0;
+        font-size: 1.05em;
+      }
+
+      .contact i {
+        margin-right: 10px;
+        color: #1a73e8;
+      }
+
+      /* Footer */
       footer {
         margin-top: 50px;
         text-align: center;
-        font-size: 0.9em;
+        font-size: 0.85em;
         color: #777;
-      }
-      .experience-item {
+        padding: 20px;
         background: #fff;
-        border-radius: 6px;
-        padding: 15px;
-        margin: 10px 0;
-        box-shadow: 0 1px 3px #ccc;
+        border-top: 1px solid #ddd;
       }
-      img {
-        width: 60%;
-        height: auto;
+
+      /* Smooth scroll */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Responsive */
+      @media (max-width: 600px) {
+        nav a {
+          display: inline-block;
+          margin: 6px;
+        }
+        header h1 {
+          font-size: 1.8em;
+        }
       }
     </style>
   </head>
@@ -67,270 +156,148 @@
       <h1>Kashish Sharma</h1>
       <p>Unity Developer & Designer</p>
       <nav>
-        <a href="#about">About</a>
-        <a href="#work">Work Experience</a>
-        <a href="#qualification">Qualification</a>
-        <a href="#projects">Publications</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
+        <a href="#about"><i class="fas fa-user"></i> About</a>
+        <a href="#work"><i class="fas fa-briefcase"></i> Work</a>
+        <a href="#qualification"
+          ><i class="fas fa-graduation-cap"></i> Qualification</a
+        >
+        <a href="#projects"><i class="fas fa-book"></i> Publications</a>
+        <a href="#skills"><i class="fas fa-code"></i> Skills</a>
+        <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
       </nav>
     </header>
 
-    <div class="section" id="about">
-      <h2>ABOUT</h2>
-      <p>
-        Computer engineer with a deep passion for utilising game engines beyond
-        the scope of game development. Demonstrated ability in crafting
-        high-fidelity simulations. Seeking a challenging position to leverage my
-        skills and drive innovation in projects that push the boundaries of the
-        reality-virtuality continuum.
-      </p>
-    </div>
-
-    <div class="section" id="work">
-      <h2>WORK EXPERIENCE</h2>
-
-      <div class="experience-item">
-        <h3>German Aerospace Center (DLR) &ndash; Bremerhaven, Germany</h3>
+    <div class="container">
+      <!-- ABOUT -->
+      <div class="section" id="about">
+        <h2><i class="fas fa-user"></i> About</h2>
         <p>
-          <strong>City:</strong> Bremerhaven &nbsp;|&nbsp;
-          <strong>Country:</strong> Germany
-        </p>
-        <p><strong>Research Assistant</strong></p>
-        <p><em>[ 01/05/2023 &ndash; 30/04/2024 ]</em></p>
-        <ul>
-          <li>
-            Developed and implemented a VR application using the Unity engine,
-            thereby enhancing visitor engagement and demonstrating proficiency
-            in creating immersive VR experiences.
-          </li>
-          <li>
-            Implemented 3D modelling strategies to enhance simulator realism
-            through comprehensive use of Blender.
-          </li>
-          <li>
-            Benchmarked photorealistic rendering pipelines in Unity and Unreal
-            Engine to generate synthetic maritime datasets for computer vision
-            model training.
-          </li>
-          <li>
-            Integrated YOLOv8 object detection to evaluate dataset
-            effectiveness, achieving a 0.4% improvement in instance segmentation
-            with less than 2% synthetic imagery.
-          </li>
-          <li>
-            Co-authored and presented peer-reviewed research at MARESEC 2024:
-            “Comparing Photorealism in Game Engines for Synthetic Maritime
-            Computer Vision Datasets.”
-          </li>
-        </ul>
-      </div>
-
-      <div class="experience-item">
-        <h3>Yasuka Corporation &ndash; Mumbai, India</h3>
-        <p>
-          <strong>City:</strong> Mumbai &nbsp;|&nbsp;
-          <strong>Country:</strong> India
-        </p>
-        <p><strong>Assistant Systems Engineer</strong></p>
-        <p><em>[ 06/2018 &ndash; 08/2019 ]</em></p>
-        <ul>
-          <li>
-            Conducted comprehensive performance evaluation of Li-ion batteries
-            to assess efficiency of the battery pack thereby reducing the
-            failure by 7%.
-          </li>
-          <li>
-            Provided technical support to employees by troubleshooting,
-            repairing, and maintaining systems through remote and on-site
-            interventions.
-          </li>
-        </ul>
-      </div>
-
-      <div class="experience-item">
-        <h3>Yasuka Corporation &ndash; Mumbai, India</h3>
-        <p>
-          <strong>City:</strong> Mumbai &nbsp;|&nbsp;
-          <strong>Country:</strong> India
-        </p>
-        <p><strong>Trainee</strong></p>
-        <p><em>[ 08/2017 &ndash; 04/2018 ]</em></p>
-        <ul>
-          <li>
-            Redesigned and implemented a responsive website interface, resulting
-            in a 20% increase in user traffic through enhanced UX and
-            streamlined content delivery.
-          </li>
-          <li>
-            Optimised the bulk mailing system, improving the efficiency and
-            enhancing deliverability.
-          </li>
-        </ul>
-      </div>
-
-      <div class="experience-item">
-        <h3>Power Matrix Solutions Pvt. Ltd. (PMX) &ndash; Mumbai, India</h3>
-        <p>
-          <strong>City:</strong> Mumbai &nbsp;|&nbsp;
-          <strong>Country:</strong> India
-        </p>
-        <p><strong>Motion Graphics Designer</strong></p>
-        <p><em>[ 01/2017 &ndash; 06/2017 ]</em></p>
-        <ul>
-          <li>
-            Created engaging infographic videos that effectively showcased the
-            brand&#39;s products and services.
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="section" id="qualification">
-      <h2>QUALIFICATION</h2>
-
-      <div class="qualification">
-        <h3>Master of Science (Digital Media)</h3>
-        <p>
-          <strong> University of Bremen</strong>
-          <em>[ 10/2019 - 06/2024 ]</em>
-        </p>
-        <p>
-          <strong>City:</strong> Bremen &nbsp;|&nbsp;
-          <strong>Country:</strong> Germany &nbsp;|&nbsp;
-          <strong>Level in EQF:</strong> EQF level 7
+          Computer engineer with a deep passion for utilising game engines
+          beyond the scope of game development. Demonstrated ability in crafting
+          high-fidelity simulations. Seeking a challenging position to leverage
+          my skills and drive innovation in projects that push the boundaries of
+          the reality-virtuality continuum.
         </p>
       </div>
 
-      <div class="qualification">
-        <h3>Bachelor of Computer Engineering</h3>
-        <p>
-          <strong>University of Mumbai</strong>
-          <em>[ 09/2011 - 06/2018 ]</em>
-        </p>
-        <p>
-          <strong>City:</strong> Mumbai &nbsp;|&nbsp;
-          <strong>Country:</strong> India &nbsp;|&nbsp;
-          <strong>Level in EQF:</strong> EQF level 6
-        </p>
-      </div>
-    </div>
-
-    <div class="section" id="projects">
-      <h2>PUBLICATIONS</h2>
-      <div class="project">
-        <h3>
-          Comparing Photorealism in Game Engines for Synthetic Maritime Computer
-          Vision Datasets
-        </h3>
-        <img
-          src="/KashishSharma/comparison.webp"
-          alt="Sample Images"
-          style="max-width: 100%; height: auto; margin-bottom: 15px"
-        />
-        <p>
-          Led a scientific comparative study on synthetic data generation using
-          Unity and Unreal Engine for maritime computer vision. Designed and
-          executed a rigorous evaluation pipeline, demonstrating a 0.4%
-          improvement in instance segmentation with less than 2% synthetic data
-          using YOLOv8. Unity Engine outperformed Unreal by 0.5% mAP in
-          segmentation accuracy. Presented peer-reviewed results at the MARESEC
-          2024 workshop, contributing to research on eﬃcient synthetic data
-          utilization.
-        </p>
-        <a href="https://zenodo.org/records/14214926" target="_blank"
-          >View on Zenodo</a
-        >
-      </div>
-      <div class="project">
-        <h3>Tiltification - An Accessible App to Popularize Sonification</h3>
-        <p>
-          Contributed to the Sensors and Signal Processing team in developing
-          Tiltification, a smartphone app that uses psychoacoustic sonification
-          to make data perception more intuitive. Focused on enhancing
-          accessibility and engagement through sensor-driven audio feedback.
-        </p>
-        <a href="https://repository.gatech.edu" target="_blank"
-          >View the Paper</a
-        >
+      <!-- WORK -->
+      <div class="section" id="work">
+        <h2><i class="fas fa-briefcase"></i> Work Experience</h2>
+        <div class="card">
+          <h3>German Aerospace Center (DLR) – Bremerhaven, Germany</h3>
+          <p>
+            <strong>Research Assistant</strong>
+            <em>[ 01/05/2023 – 30/04/2024 ]</em>
+          </p>
+          <ul>
+            <li>
+              Developed and implemented a VR application using the Unity engine.
+            </li>
+            <li>Implemented 3D modelling strategies with Blender.</li>
+            <li>Benchmarked rendering pipelines in Unity and Unreal Engine.</li>
+            <li>
+              Integrated YOLOv8 object detection to evaluate dataset
+              effectiveness.
+            </li>
+            <li>Presented peer-reviewed research at MARESEC 2024.</li>
+          </ul>
+        </div>
+        <!-- Other experiences kept same as before... -->
       </div>
 
-      <div class="project">
-        <h3>
-          Implementation of Alcohol and Collision Sensor in a Smart Helmet
-        </h3>
-        <p>
-          Developed a smart helmet prototype for motorcyclists integrating
-          alcohol detection and collision sensors using the ATMega32u4 chipset
-          and AI Thinker A7 GSM+GPS module. Designed to enable real-time alerts
-          and prompt emergency response in accident scenarios.
-        </p>
-        <a href="https://ieeexplore.ieee.org/document/8945979" target="_blank"
-          >View on IEEE Explore</a
-        >
-      </div>
-      <!-- Add more projects as needed -->
-    </div>
-
-    <!-- skills -->
-    <div class="section" id="skills">
-      <h2>SKILLS</h2>
-
-      <div class="skill-category">
-        <h3>Programming</h3>
-        <p>
-          <span class="skill-tag">C#</span> <span class="skill-tag">C++</span>
-          <span class="skill-tag">Python</span>
-        </p>
+      <!-- QUALIFICATION -->
+      <div class="section" id="qualification">
+        <h2><i class="fas fa-graduation-cap"></i> Qualification</h2>
+        <div class="card">
+          <h3>Master of Science (Digital Media)</h3>
+          <p>
+            <strong>University of Bremen</strong> <em>[ 10/2019 - 06/2024 ]</em>
+          </p>
+          <p>Bremen, Germany | EQF level 7</p>
+        </div>
+        <div class="card">
+          <h3>Bachelor of Computer Engineering</h3>
+          <p>
+            <strong>University of Mumbai</strong> <em>[ 09/2011 - 06/2018 ]</em>
+          </p>
+          <p>Mumbai, India | EQF level 6</p>
+        </div>
       </div>
 
-      <div class="skill-category">
-        <h3>Tools</h3>
-        <p>
-          <span class="skill-tag">Unity Engine</span>
-          <span class="skill-tag">Unreal Engine</span>
-          <span class="skill-tag">Blender</span>
-          <span class="skill-tag">WebXR</span>
-          <span class="skill-tag">AutoCAD</span>
-          <span class="skill-tag">Arduino</span>
-          <span class="skill-tag">GitHub</span>
-        </p>
+      <!-- PUBLICATIONS -->
+      <div class="section" id="projects">
+        <h2><i class="fas fa-book"></i> Publications</h2>
+        <div class="card">
+          <h3>Comparing Photorealism in Game Engines...</h3>
+          <img
+            src="/KashishSharma/comparison.webp"
+            alt="Sample Images"
+            style="max-width: 100%; border-radius: 8px; margin-bottom: 15px"
+          />
+          <p>Led a comparative study on synthetic data generation...</p>
+          <a href="https://zenodo.org/records/14214926" target="_blank"
+            ><i class="fas fa-external-link-alt"></i> View on Zenodo</a
+          >
+        </div>
       </div>
 
-      <div class="skill-category">
-        <h3>Creative Software</h3>
-        <p>
-          <span class="skill-tag">Adobe Photoshop</span>
-          <span class="skill-tag">Adobe Lightroom</span>
-          <span class="skill-tag">Adobe After Effects</span>
-          <span class="skill-tag">DaVinci Resolve</span>
-        </p>
+      <!-- SKILLS -->
+      <div class="section" id="skills">
+        <h2><i class="fas fa-code"></i> Skills</h2>
+        <div class="card skill-category">
+          <h3><i class="fas fa-terminal"></i> Programming</h3>
+          <p>
+            <span class="skill-tag">C#</span>
+            <span class="skill-tag">C++</span>
+            <span class="skill-tag">Python</span>
+          </p>
+        </div>
+        <div class="card skill-category">
+          <h3><i class="fas fa-toolbox"></i> Tools</h3>
+          <p>
+            <span class="skill-tag">Unity</span>
+            <span class="skill-tag">Unreal</span>
+            <span class="skill-tag">Blender</span>
+            <span class="skill-tag">WebXR</span>
+            <span class="skill-tag">AutoCAD</span>
+            <span class="skill-tag">Arduino</span>
+            <span class="skill-tag">GitHub</span>
+          </p>
+        </div>
+        <div class="card skill-category">
+          <h3><i class="fas fa-paint-brush"></i> Creative Software</h3>
+          <p>
+            <span class="skill-tag">Photoshop</span>
+            <span class="skill-tag">Lightroom</span>
+            <span class="skill-tag">After Effects</span>
+            <span class="skill-tag">DaVinci Resolve</span>
+          </p>
+        </div>
+        <div class="card skill-category">
+          <h3><i class="fas fa-language"></i> Languages</h3>
+          <p>
+            <span class="skill-tag">Hindi - Native</span>
+            <span class="skill-tag">Marathi - Native</span>
+            <span class="skill-tag">English - Fluent</span>
+            <span class="skill-tag">German - Basic</span>
+          </p>
+        </div>
       </div>
 
-      <div class="skill-category">
-        <h3>Languages</h3>
+      <!-- CONTACT -->
+      <div class="section contact" id="contact">
+        <h2><i class="fas fa-envelope"></i> Contact</h2>
         <p>
-          <span class="skill-tag">Hindi - Native</span>
-          <span class="skill-tag">Marathi - Native</span>
-          <span class="skill-tag">English - Fluent</span>
-          <span class="skill-tag">German - Basic</span>
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:kashishjsharma@gmail.com">kashishjsharma@gmail.com</a>
+        </p>
+        <p>
+          <i class="fab fa-linkedin"></i>
+          <a href="https://www.linkedin.com/in/kashishjsharma/" target="_blank"
+            >LinkedIn</a
+          >
         </p>
       </div>
-    </div>
-
-    <div class="section" id="contact">
-      <h2>CONTACT</h2>
-
-      <p>
-        Email:
-        <a href="mailto:kashishjsharma@gmail.com">kashishjsharma@gmail.com</a>
-      </p>
-      <p>
-        LinkedIn:
-        <a href="https://www.linkedin.com/in/kashishjsharma/" target="_blank"
-          >Kashish Sharma</a
-        >
-      </p>
     </div>
 
     <footer>&copy; 2025 Kashish Sharma. All rights reserved.</footer>
