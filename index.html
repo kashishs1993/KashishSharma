@@ -1,28 +1,51 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Kashish Sharma</title>
+    <title>Kashish Sharma | Creative Technologist & Simulation Developer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Portfolio of Kashish Sharma — creative technologist, simulation and XR developer, researcher, and photographer."
+    />
+
     <!-- Font Awesome Icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-      integrity="sha512-sV2Qm6jZL7vI1ikvB6Lmp5B7S8e8rM2cfjI1GzYF5iGkV4FfL2E+F4Ko4FfQox9J9X0yGv1hKX5yufHwGrbgNw=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
     <style>
+      :root {
+        --bg: #f4f6f8;
+        --surface: #ffffff;
+        --text: #222;
+        --muted: #667085;
+        --heading: #1a3d7c;
+        --accent: #1a73e8;
+        --border: #e0e4e8;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
       body {
         font-family: "Segoe UI", Arial, sans-serif;
         margin: 0;
-        background: #f4f6f8;
-        color: #222;
+        background: var(--bg);
+        color: var(--text);
         line-height: 1.6;
       }
 
       .container {
-        max-width: 900px;
+        max-width: 1000px;
         margin: auto;
         padding: 20px;
       }
@@ -30,11 +53,11 @@
       h1,
       h2,
       h3 {
-        color: #1a3d7c;
+        color: var(--heading);
       }
 
       a {
-        color: #1a73e8;
+        color: var(--accent);
         text-decoration: none;
       }
 
@@ -44,23 +67,44 @@
 
       header {
         text-align: center;
-        padding: 40px 20px;
-        background: #fff;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 56px 20px 42px;
+        background: var(--surface);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
         margin-bottom: 30px;
       }
 
       header h1 {
-        margin-bottom: 10px;
-        font-size: 2.2em;
+        margin: 0 0 8px;
+        font-size: 2.5em;
+      }
+
+      .tagline {
+        font-size: 1.1em;
+        color: var(--muted);
+        margin: 0;
+      }
+
+      .hero-links {
+        margin-top: 18px;
+      }
+
+      .hero-links a {
+        display: inline-block;
+        margin: 5px 7px;
+        padding: 8px 14px;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        background: #fff;
+        font-weight: 600;
       }
 
       nav {
-        margin-top: 15px;
+        margin-top: 22px;
       }
 
       nav a {
-        margin: 0 12px;
+        display: inline-block;
+        margin: 5px 9px;
         font-weight: 500;
         transition: color 0.2s;
       }
@@ -70,41 +114,90 @@
       }
 
       .section {
-        margin-bottom: 50px;
+        margin-bottom: 56px;
+        scroll-margin-top: 20px;
       }
 
       .section h2 {
         margin-bottom: 20px;
-        border-bottom: 2px solid #e0e4e8;
+        border-bottom: 2px solid var(--border);
         padding-bottom: 8px;
       }
 
+      .intro {
+        font-size: 1.05em;
+        max-width: 850px;
+      }
+
       .card {
-        background: #fff;
+        background: var(--surface);
         border-radius: 10px;
         padding: 20px;
         margin: 15px 0;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-        transition: transform 0.2s, box-shadow 0.2s;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.09);
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s;
       }
 
       .card:hover {
         transform: translateY(-3px);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.14);
       }
 
-      .skill-tag {
+      .card h3 {
+        margin-top: 0;
+      }
+
+      .project-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .project-card {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+
+      .project-card p {
+        flex-grow: 1;
+      }
+
+      .project-meta {
+        margin: -4px 0 10px;
+        color: var(--muted);
+        font-size: 0.9em;
+      }
+
+      .project-links a {
         display: inline-block;
-        margin: 6px;
-        padding: 6px 12px;
+        margin-right: 12px;
+        margin-top: 6px;
+        font-weight: 600;
+      }
+
+      .project-image {
+        width: 100%;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        display: block;
+      }
+
+      .skill-tag,
+      .tech-tag {
+        display: inline-block;
+        margin: 4px 4px 4px 0;
+        padding: 5px 10px;
         background: #eef2f6;
         border-radius: 20px;
-        font-size: 0.9em;
+        font-size: 0.86em;
       }
 
       .skill-category h3 i {
         margin-right: 8px;
-        color: #1a73e8;
+        color: var(--accent);
       }
 
       .contact p {
@@ -114,7 +207,12 @@
 
       .contact i {
         margin-right: 10px;
-        color: #1a73e8;
+        color: var(--accent);
+      }
+
+      .note {
+        color: var(--muted);
+        font-size: 0.95em;
       }
 
       footer {
@@ -123,56 +221,87 @@
         font-size: 0.85em;
         color: #777;
         padding: 20px;
-        background: #fff;
+        background: var(--surface);
         border-top: 1px solid #ddd;
       }
 
-      html {
-        scroll-behavior: smooth;
+      @media (max-width: 760px) {
+        .project-grid {
+          grid-template-columns: 1fr;
+        }
+
+        header h1 {
+          font-size: 2em;
+        }
       }
 
       @media (max-width: 600px) {
         nav a {
-          display: inline-block;
           margin: 6px;
-        }
-        header h1 {
-          font-size: 1.8em;
         }
       }
     </style>
   </head>
+
   <body>
     <header>
       <h1>Kashish Sharma</h1>
-      <p>Unity Developer & Designer</p>
+      <p class="tagline">
+        Creative Technologist · Simulation & XR Developer · Researcher
+      </p>
+
+      <div class="hero-links">
+        <a href="mailto:kashishjsharma@gmail.com"
+          ><i class="fas fa-envelope"></i> Email</a
+        >
+        <a
+          href="https://www.linkedin.com/in/kashishjsharma/"
+          target="_blank"
+          rel="noopener"
+        >
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a
+          href="https://github.com/kashishs1993"
+          target="_blank"
+          rel="noopener"
+        >
+          <i class="fab fa-github"></i> GitHub
+        </a>
+      </div>
+
       <nav>
         <a href="#about"><i class="fas fa-user"></i> About</a>
         <a href="#work"><i class="fas fa-briefcase"></i> Work</a>
-        <a href="#qualification"
-          ><i class="fas fa-graduation-cap"></i> Qualification</a
+        <a href="#featured-projects"
+          ><i class="fas fa-layer-group"></i> Projects</a
         >
-        <a href="#projects"><i class="fas fa-book"></i> Publications</a>
+        <a href="#publications"><i class="fas fa-book"></i> Publications</a>
+        <a href="#qualification"
+          ><i class="fas fa-graduation-cap"></i> Education</a
+        >
         <a href="#skills"><i class="fas fa-code"></i> Skills</a>
+        <a href="#creative"><i class="fas fa-camera"></i> Creative</a>
         <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
       </nav>
     </header>
 
-    <div class="container">
+    <main class="container">
       <!-- ABOUT -->
-      <div class="section" id="about">
+      <section class="section" id="about">
         <h2><i class="fas fa-user"></i> About</h2>
-        <p>
-          Computer engineer with a deep passion for utilising game engines
-          beyond the scope of game development. Demonstrated ability in crafting
-          high-fidelity simulations. Seeking a challenging position to leverage
-          my skills and drive innovation in projects that push the boundaries of
-          the reality-virtuality continuum.
+        <p class="intro">
+          Computer engineer and creative technologist with a passion for using
+          game engines beyond traditional game development. My work spans
+          high-fidelity simulation, synthetic data generation, XR, interaction
+          design, physical computing, and visual storytelling. I am particularly
+          interested in projects that connect real and virtual environments and
+          turn emerging technology into practical, engaging experiences.
         </p>
-      </div>
+      </section>
 
       <!-- WORK EXPERIENCE -->
-      <div class="section" id="work">
+      <section class="section" id="work">
         <h2><i class="fas fa-briefcase"></i> Work Experience</h2>
 
         <div class="card">
@@ -183,16 +312,16 @@
           </p>
           <ul>
             <li>
-              Developed and implemented a VR application using the Unity engine,
-              enhancing visitor engagement with immersive experiences.
+              Developed and implemented a VR application using Unity, creating
+              immersive visitor experiences.
             </li>
             <li>
-              Implemented 3D modelling strategies to improve simulator realism
-              with Blender.
+              Implemented 3D modelling strategies in Blender to improve
+              simulator realism.
             </li>
             <li>
               Benchmarked photorealistic rendering pipelines in Unity and Unreal
-              Engine to generate synthetic maritime datasets.
+              Engine for synthetic maritime datasets.
             </li>
             <li>
               Integrated YOLOv8 object detection to evaluate dataset
@@ -200,11 +329,7 @@
               accuracy with less than 2% synthetic imagery.
             </li>
             <li>
-              Co-authored and presented peer-reviewed research at MARESEC 2024:
-              <em
-                >“Comparing Photorealism in Game Engines for Synthetic Maritime
-                Computer Vision Datasets.”</em
-              >
+              Co-authored and presented peer-reviewed research at MARESEC 2024.
             </li>
           </ul>
         </div>
@@ -217,12 +342,12 @@
           </p>
           <ul>
             <li>
-              Conducted comprehensive performance evaluation of Li-ion
-              batteries, reducing failure rates by 7%.
+              Conducted performance evaluation of Li-ion batteries, reducing
+              failure rates by 7%.
             </li>
             <li>
-              Provided technical support through troubleshooting, repairing, and
-              maintaining systems via remote and on-site interventions.
+              Provided technical support through troubleshooting, repair,
+              maintenance, and remote/on-site interventions.
             </li>
           </ul>
         </div>
@@ -250,73 +375,328 @@
           </p>
           <ul>
             <li>
-              Created engaging infographic videos showcasing the brand’s
-              products and services.
+              Created infographic videos used to present and promote the
+              company's products and services.
             </li>
           </ul>
         </div>
-      </div>
+      </section>
 
-      <!-- QUALIFICATION -->
-      <div class="section" id="qualification">
-        <h2><i class="fas fa-graduation-cap"></i> Qualification</h2>
-        <div class="card">
-          <h3>Master of Science (Digital Media)</h3>
-          <p>
-            <strong>University of Bremen</strong> <em>[ 10/2019 - 06/2024 ]</em>
-          </p>
-          <p>Bremen, Germany | EQF level 7</p>
+      <!-- FEATURED PROJECTS -->
+      <section class="section" id="featured-projects">
+        <h2><i class="fas fa-layer-group"></i> Selected Projects</h2>
+
+        <div class="project-grid">
+          <article class="card project-card">
+            <h3>Synthetic Maritime Datasets</h3>
+            <p class="project-meta">Master's Thesis · DLR Bremerhaven</p>
+            <img
+              class="project-image"
+              src="/KashishSharma/comparison.webp"
+              alt="Comparison of synthetic maritime scenes generated with game engines"
+            />
+            <p>
+              Compared Unity HDRP and Unreal Engine 5.3 for photorealistic
+              synthetic maritime data generation. Recreated real port scenes,
+              tested rendering variations, and evaluated synthetic-data
+              augmentation using YOLOv8.
+            </p>
+            <div>
+              <span class="tech-tag">Unity</span>
+              <span class="tech-tag">Unreal Engine</span>
+              <span class="tech-tag">Blender</span>
+              <span class="tech-tag">YOLOv8</span>
+              <span class="tech-tag">Synthetic Data</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://zenodo.org/records/14214926"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="fas fa-file-lines"></i> Paper
+              </a>
+              <a
+                href="https://media.suub.uni-bremen.de/handle/elib/8084"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="fas fa-graduation-cap"></i> Thesis
+              </a>
+            </div>
+          </article>
+
+          <article class="card project-card">
+            <h3>Tiltification</h3>
+            <p class="project-meta">Sonification Apps · University of Bremen</p>
+            <p>
+              Contributed to a multi-modal spirit-level application that turns
+              device tilt into real-time auditory feedback. The project explores
+              sonification as an accessible interface for precise levelling and
+              everyday interaction.
+            </p>
+            <div>
+              <span class="tech-tag">Sonification</span>
+              <span class="tech-tag">Sensors</span>
+              <span class="tech-tag">Accessibility</span>
+              <span class="tech-tag">Mobile</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://kashishs1993.wordpress.com/tiltification-an-accessible-app-to-popularise-sonification/"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="fas fa-arrow-up-right-from-square"></i> Project
+              </a>
+              <a
+                href="https://up2date.uni-bremen.de/en/article/20000-downloads-the-successful-tiltification-app"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="fas fa-newspaper"></i> Media Release
+              </a>
+            </div>
+          </article>
+
+          <article class="card project-card">
+            <h3>Smart Helmet</h3>
+            <p class="project-meta">Embedded Systems · Computer Engineering</p>
+            <p>
+              Built a motorcycle helmet prototype combining alcohol detection,
+              collision sensing, GSM, and GPS functionality for real-time alerts
+              and emergency-response scenarios.
+            </p>
+            <div>
+              <span class="tech-tag">ATMega32u4</span>
+              <span class="tech-tag">GSM</span>
+              <span class="tech-tag">GPS</span>
+              <span class="tech-tag">Sensors</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://ieeexplore.ieee.org/document/8945979"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="fas fa-file-lines"></i> IEEE Paper
+              </a>
+            </div>
+          </article>
+
+          <article class="card project-card">
+            <h3>Design Proposal for a Simple Calculator</h3>
+            <p class="project-meta">Interface Design · Winter Semester 2020</p>
+            <p>
+              Proposed a calculator interface that visually exposes the order of
+              arithmetic operations, helping users understand how a result is
+              produced rather than only displaying the final value.
+            </p>
+            <div>
+              <span class="tech-tag">Interaction Design</span>
+              <span class="tech-tag">UI/UX</span>
+              <span class="tech-tag">Prototyping</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://kashishs1993.wordpress.com/design-proposal-for-a-simple-calculator/"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="fas fa-arrow-up-right-from-square"></i> Project
+              </a>
+            </div>
+          </article>
+
+          <article class="card project-card">
+            <h3>Hurricane</h3>
+            <p class="project-meta">Fab Lab · University of Bremen</p>
+            <p>
+              Co-designed an architectural proposal for Bremen's Am Brill area,
+              combining historic-to-modern transitions with floating structural
+              forms. The workflow used Rhino, Blender, physical fabrication,
+              laser cutting, acrylic, wood, paper, and natural materials.
+            </p>
+            <div>
+              <span class="tech-tag">Rhino</span>
+              <span class="tech-tag">Blender</span>
+              <span class="tech-tag">Laser Cutting</span>
+              <span class="tech-tag">Physical Prototyping</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://kashishs1993.wordpress.com/hurricane/"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="fas fa-arrow-up-right-from-square"></i> Project
+              </a>
+            </div>
+          </article>
+
+          <article class="card project-card">
+            <h3>City Campus Exhibition — 2022</h3>
+            <p class="project-meta">Unity Installation · Digital Media</p>
+            <p>
+              Helped turn architectural proposals into a digital exhibition
+              using photogrammetry, 3D scene preparation, Unity, and DaVinci
+              Resolve. A Raspberry Pi programmed in Python handled automatic
+              looping of the final video installation.
+            </p>
+            <div>
+              <span class="tech-tag">Unity</span>
+              <span class="tech-tag">Photogrammetry</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Raspberry Pi</span>
+              <span class="tech-tag">DaVinci Resolve</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://kashishs1993.wordpress.com/city-campus-exhibition-2022/"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="fas fa-arrow-up-right-from-square"></i> Project
+              </a>
+            </div>
+          </article>
+
+          <article class="card project-card">
+            <h3>Entertainment Computing</h3>
+            <p class="project-meta">Game Development · Summer Semester 2020</p>
+            <p>
+              Developed a Unity game in a three-person team around the theme of
+              travelling. The isometric game follows a school kid navigating
+              obstacles, collecting coins, interacting with NPCs, and protecting
+              a newly purchased game.
+            </p>
+            <div>
+              <span class="tech-tag">Unity</span>
+              <span class="tech-tag">Game Design</span>
+              <span class="tech-tag">C#</span>
+              <span class="tech-tag">Team Project</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://kashishs1993.wordpress.com/entertainment-computing/"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="fas fa-arrow-up-right-from-square"></i> Project
+              </a>
+            </div>
+          </article>
+
+          <article class="card project-card">
+            <h3>Crystal Decay</h3>
+            <p class="project-meta">New Material Imaginaries</p>
+            <p>
+              An experimental material study using mono potassium phosphate,
+              developed as part of the New Material Imaginaries course.
+            </p>
+            <div>
+              <span class="tech-tag">Material Experimentation</span>
+              <span class="tech-tag">Creative Technology</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://vimeo.com/572934146"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="fab fa-vimeo-v"></i> Watch
+              </a>
+            </div>
+          </article>
+
+          <article class="card project-card">
+            <h3>Allergic to Humans</h3>
+            <p class="project-meta">Interactive / Speculative Project</p>
+            <p>
+              Explored surprise and personification by giving a plant a
+              distinctly human reaction: sneezing. The project combined playful
+              interaction with a physical object to create an unexpected
+              encounter.
+            </p>
+            <div>
+              <span class="tech-tag">Interaction</span>
+              <span class="tech-tag">Physical Computing</span>
+              <span class="tech-tag">Creative Coding</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://vimeo.com/799863611"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="fab fa-vimeo-v"></i> Watch
+              </a>
+            </div>
+          </article>
+
+          <article class="card project-card">
+            <h3>Personal XR Experiments</h3>
+            <p class="project-meta">Independent Work</p>
+            <p>
+              Ongoing experiments with augmented reality, SLAM, XR workflows,
+              microelectronics, and rapid technical prototyping.
+            </p>
+            <div>
+              <span class="tech-tag">AR</span>
+              <span class="tech-tag">SLAM</span>
+              <span class="tech-tag">XR</span>
+              <span class="tech-tag">Microelectronics</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://kashishs1993.wordpress.com/personal-projects/"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="fas fa-arrow-up-right-from-square"></i> Project
+              </a>
+            </div>
+          </article>
         </div>
-        <div class="card">
-          <h3>Bachelor of Computer Engineering</h3>
-          <p>
-            <strong>University of Mumbai</strong> <em>[ 09/2011 - 06/2018 ]</em>
-          </p>
-          <p>Mumbai, India | EQF level 6</p>
-        </div>
-      </div>
+      </section>
 
       <!-- PUBLICATIONS -->
-      <div class="section" id="projects">
-        <h2><i class="fas fa-book"></i> Publications</h2>
+      <section class="section" id="publications">
+        <h2><i class="fas fa-book"></i> Publications & Research</h2>
 
         <div class="card">
           <h3>
             Comparing Photorealism in Game Engines for Synthetic Maritime
             Computer Vision Datasets
           </h3>
-          <img
-            src="/KashishSharma/comparison.webp"
-            alt="Sample Images"
-            style="max-width: 100%; border-radius: 8px; margin-bottom: 15px"
-          />
           <p>
-            Led a scientific comparative study on synthetic data generation
-            using Unity and Unreal Engine for maritime computer vision. Designed
-            and executed a rigorous evaluation pipeline, demonstrating a 0.4%
-            improvement in instance segmentation with less than 2% synthetic
-            data using YOLOv8. Unity Engine outperformed Unreal by 0.5% mAP in
-            segmentation accuracy. Presented peer-reviewed results at the
-            MARESEC 2024 workshop, contributing to research on efficient
-            synthetic data utilization.
+            Comparative study of Unity and Unreal Engine for maritime synthetic
+            data generation, including photorealistic scene recreation and
+            YOLOv8 segmentation evaluation. Presented at MARESEC 2024.
           </p>
-          <a href="https://zenodo.org/records/14214926" target="_blank"
-            ><i class="fas fa-external-link-alt"></i> View on Zenodo</a
+          <a
+            href="https://zenodo.org/records/14214926"
+            target="_blank"
+            rel="noopener"
           >
+            <i class="fas fa-external-link-alt"></i> View on Zenodo
+          </a>
         </div>
 
         <div class="card">
-          <h3>Tiltification - An Accessible App to Popularize Sonification</h3>
+          <h3>Tiltification — An Accessible App to Popularise Sonification</h3>
           <p>
-            Contributed to the Sensors and Signal Processing team in developing
-            Tiltification, a smartphone app that uses psychoacoustic
-            sonification to make data perception more intuitive. Focused on
-            enhancing accessibility and engagement through sensor-driven audio
-            feedback.
+            Research and development contribution to a sensor-driven mobile
+            application that uses psychoacoustic sonification to communicate
+            device tilt through sound.
           </p>
-          <a href="https://repository.gatech.edu" target="_blank"
-            ><i class="fas fa-external-link-alt"></i> View the Paper</a
+          <a
+            href="https://repository.gatech.edu"
+            target="_blank"
+            rel="noopener"
           >
+            <i class="fas fa-external-link-alt"></i> View the Paper
+          </a>
         </div>
 
         <div class="card">
@@ -324,19 +704,43 @@
             Implementation of Alcohol and Collision Sensor in a Smart Helmet
           </h3>
           <p>
-            Developed a smart helmet prototype for motorcyclists integrating
-            alcohol detection and collision sensors using the ATMega32u4 chipset
-            and AI Thinker A7 GSM+GPS module. Designed to enable real-time
-            alerts and prompt emergency response in accident scenarios.
+            Technical paper describing a smart helmet prototype for
+            motorcyclists integrating alcohol detection, collision sensing, GSM,
+            and GPS.
           </p>
-          <a href="https://ieeexplore.ieee.org/document/8945979" target="_blank"
-            ><i class="fas fa-external-link-alt"></i> View on IEEE Explore</a
+          <a
+            href="https://ieeexplore.ieee.org/document/8945979"
+            target="_blank"
+            rel="noopener"
           >
+            <i class="fas fa-external-link-alt"></i> View on IEEE Xplore
+          </a>
         </div>
-      </div>
+      </section>
+
+      <!-- EDUCATION -->
+      <section class="section" id="qualification">
+        <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+
+        <div class="card">
+          <h3>Master of Science — Digital Media</h3>
+          <p>
+            <strong>University of Bremen</strong> <em>[ 10/2019 – 06/2024 ]</em>
+          </p>
+          <p>Bremen, Germany | EQF level 7</p>
+        </div>
+
+        <div class="card">
+          <h3>Bachelor of Computer Engineering</h3>
+          <p>
+            <strong>University of Mumbai</strong> <em>[ 09/2011 – 06/2018 ]</em>
+          </p>
+          <p>Mumbai, India | EQF level 6</p>
+        </div>
+      </section>
 
       <!-- SKILLS -->
-      <div class="section" id="skills">
+      <section class="section" id="skills">
         <h2><i class="fas fa-code"></i> Skills</h2>
 
         <div class="card skill-category">
@@ -349,15 +753,25 @@
         </div>
 
         <div class="card skill-category">
-          <h3><i class="fas fa-toolbox"></i> Tools</h3>
+          <h3><i class="fas fa-vr-cardboard"></i> Simulation, 3D & XR</h3>
           <p>
             <span class="skill-tag">Unity Engine</span>
             <span class="skill-tag">Unreal Engine</span>
             <span class="skill-tag">Blender</span>
             <span class="skill-tag">WebXR</span>
-            <span class="skill-tag">AutoCAD</span>
+            <span class="skill-tag">AR / VR</span>
+            <span class="skill-tag">Photogrammetry</span>
+          </p>
+        </div>
+
+        <div class="card skill-category">
+          <h3><i class="fas fa-microchip"></i> Technical & Prototyping</h3>
+          <p>
             <span class="skill-tag">Arduino</span>
+            <span class="skill-tag">Raspberry Pi</span>
+            <span class="skill-tag">AutoCAD</span>
             <span class="skill-tag">GitHub</span>
+            <span class="skill-tag">Sensors</span>
           </p>
         </div>
 
@@ -374,16 +788,61 @@
         <div class="card skill-category">
           <h3><i class="fas fa-language"></i> Languages</h3>
           <p>
-            <span class="skill-tag">Hindi - Native</span>
-            <span class="skill-tag">Marathi - Native</span>
-            <span class="skill-tag">English - Fluent</span>
-            <span class="skill-tag">German - Basic</span>
+            <span class="skill-tag">Hindi — Native</span>
+            <span class="skill-tag">Marathi — Native</span>
+            <span class="skill-tag">English — Fluent</span>
+            <span class="skill-tag">German — Basic</span>
           </p>
         </div>
-      </div>
+      </section>
+
+      <!-- CREATIVE / PHOTOGRAPHY -->
+      <section class="section" id="creative">
+        <h2><i class="fas fa-camera"></i> Photography & Creative Work</h2>
+
+        <div class="card">
+          <h3>Camera & I</h3>
+          <p>
+            Photography and cinematography have been a long-running part of my
+            creative practice. During my undergraduate years I led photography
+            for multiple annual college events and for the college magazine
+            <em>Catharsis</em> in 2014 and 2015. In 2016, I completed an
+            intensive cinematography course in Pune, India, with hands-on camera
+            training.
+          </p>
+          <p>
+            I have also worked as a freelance photographer, gaffer, animator,
+            and promotional-content creator, and I curate Photowalk Bremen.
+          </p>
+
+          <div class="project-links">
+            <a
+              href="https://www.lensculture.com/street-photography-awards-2017/event-submission/382268"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fas fa-camera-retro"></i> Street Photography
+            </a>
+            <a
+              href="https://www.lensculture.com/photo-competitions/black-and-white-photography-awards-2018/event-submission/620546"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fas fa-camera-retro"></i> Black & White
+            </a>
+            <a
+              href="https://kashishs1993.wordpress.com"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fas fa-archive"></i> WordPress Archive
+            </a>
+          </div>
+        </div>
+      </section>
 
       <!-- CONTACT -->
-      <div class="section contact" id="contact">
+      <section class="section contact" id="contact">
         <h2><i class="fas fa-envelope"></i> Contact</h2>
         <p>
           <i class="fas fa-envelope"></i>
@@ -391,13 +850,29 @@
         </p>
         <p>
           <i class="fab fa-linkedin"></i>
-          <a href="https://www.linkedin.com/in/kashishjsharma/" target="_blank"
+          <a
+            href="https://www.linkedin.com/in/kashishjsharma/"
+            target="_blank"
+            rel="noopener"
             >LinkedIn</a
           >
         </p>
-      </div>
-    </div>
+        <p>
+          <i class="fab fa-github"></i>
+          <a
+            href="https://github.com/kashishs1993"
+            target="_blank"
+            rel="noopener"
+            >GitHub</a
+          >
+        </p>
+        <p class="note">
+          The older WordPress site remains available as an archive while this
+          GitHub Pages portfolio becomes the primary home for my work.
+        </p>
+      </section>
+    </main>
 
-    <footer>&copy; 2025 Kashish Sharma. All rights reserved.</footer>
+    <footer>&copy; 2026 Kashish Sharma. All rights reserved.</footer>
   </body>
 </html>
