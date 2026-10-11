@@ -17,274 +17,285 @@
       referrerpolicy="no-referrer"
     />
 
-    <style>
-      :root {
-        --bg: #f5f7fa;
-        --surface: #ffffff;
-        --text: #1f2937;
-        --muted: #667085;
-        --heading: #17365d;
-        --accent: #cc6400;
-        --accent-dark: #cc6400;
-        --accent-soft: #fff1e3;
-        --hero: #10233f;
-        --hero-muted: #cbd5e1;
-        --border: #dfe5ec;
-      }
+   <style>
+  :root {
+    --bg: #f5f7fa;
+    --surface: #ffffff;
+    --text: #1f2937;
+    --muted: #667085;
 
-      * {
-        box-sizing: border-box;
-      }
+    --heading: #17365d;
 
-      html {
-        scroll-behavior: smooth;
-      }
+    --accent: #ff7d00;
+    --accent-dark: #cc6400;
 
-      body {
-        font-family: "Segoe UI", Arial, sans-serif;
-        margin: 0;
-        background: var(--bg);
-        color: var(--text);
-        line-height: 1.6;
-      }
+    --hero: #10233f;
+    --hero-muted: #cbd5e1;
 
-      .container {
-        max-width: 1000px;
-        margin: auto;
-        padding: 20px;
-      }
+    --border: #dfe5ec;
+    --tag-bg: #e8eef5;
+  }
 
-      h1,
-      h2,
-      h3 {
-        color: var(--heading);
-      }
+  * {
+    box-sizing: border-box;
+  }
 
-      a {
-        color: var(--accent);
-        text-decoration: none;
-      }
+  html {
+    scroll-behavior: smooth;
+  }
 
-      a:hover {
-        color: var(--accent-dark);
-        text-decoration: underline;
-      }
+  body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
 
-      header {
-        text-align: center;
-        padding: 56px 20px 42px;
-        background: var(--hero);
-        color: white;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
-        margin-bottom: 30px;
-      }
+  .container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+  }
 
-      header h1 {
-        margin: 0 0 8px;
-        font-size: 2.5em;
-        color: white;
-      }
+  h1,
+  h2,
+  h3 {
+    color: var(--heading);
+  }
 
-      header h1::after {
-        content: "";
-        display: block;
-        width: 55px;
-        height: 3px;
-        background: var(--accent);
-        margin: 12px auto 0;
-        border-radius: 3px;
-      }
+  a {
+    color: var(--heading);
+    text-decoration: none;
+  }
 
-      .tagline {
-        font-size: 1.1em;
-        color: var(--hero-muted);
-        margin: 0;
-      }
+  a:hover {
+    color: var(--hero);
+    text-decoration: underline;
+  }
 
-      .hero-links {
-        margin-top: 18px;
-      }
+  header {
+    text-align: center;
+    padding: 56px 20px 42px;
+    background: var(--hero);
+    color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    margin-bottom: 30px;
+  }
 
-      .hero-links a {
-        display: inline-block;
-        margin: 5px 7px;
-        padding: 8px 14px;
-        border: 0.5px solid var(--accent);
-        border-radius: 999px;
-        color: var(--accent);
-        background: transparent;
-        font-weight: 600;
-        transition:
-          background 0.2s,
-          color 0.2s,
-          transform 0.2s;
-      }
+  header h1 {
+    margin: 0 0 8px;
+    font-size: 2.5em;
+    color: white;
+  }
 
-      .hero-links a:hover {
-        background: var(--accent);
-        color: white;
-        text-decoration: none;
-        transform: translateY(-2px);
-      }
+  header h1::after {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 3px;
+    background: var(--accent);
+    margin: 12px auto 0;
+    border-radius: 3px;
+  }
 
-      nav {
-        margin-top: 22px;
-      }
+  .tagline {
+    font-size: 1.1em;
+    color: var(--hero-muted);
+    margin: 0;
+  }
 
-      nav a {
-        display: inline-block;
-        margin: 5px 9px;
-        font-weight: 500;
-        color: #f8fafc;
-        transition: color 0.2s;
-      }
+  .hero-links {
+    margin-top: 18px;
+  }
 
-      nav a:hover {
-        color: var(--accent);
-        text-decoration: none;
-      }
+  .hero-links a {
+    display: inline-block;
+    margin: 5px 7px;
+    padding: 8px 14px;
+    border: 1px solid var(--accent);
+    border-radius: 999px;
+    color: var(--accent);
+    background: transparent;
+    font-weight: 600;
+    transition:
+      background 0.2s,
+      color 0.2s,
+      transform 0.2s;
+  }
 
-      .section {
-        margin-bottom: 56px;
-        scroll-margin-top: 20px;
-      }
+  .hero-links a:hover {
+    background: var(--accent);
+    color: white;
+    text-decoration: none;
+    transform: translateY(-2px);
+  }
 
-      .section h2 {
-        color: var(--heading);
-        margin-bottom: 20px;
-        border-bottom: 2px solid var(--border);
-        padding-bottom: 8px;
-      }
+  nav {
+    margin-top: 22px;
+  }
 
-      .section h2 i {
-        color: var(--hero);
-        margin-right: 6px;
-      }
+  nav a {
+    display: inline-block;
+    margin: 5px 9px;
+    font-weight: 500;
+    color: #f8fafc;
+    transition: color 0.2s;
+  }
 
-      .intro {
-        font-size: 1.05em;
-        max-width: 850px;
-      }
+  nav a:hover {
+    color: var(--accent);
+    text-decoration: none;
+  }
 
-      .card {
-        background: var(--surface);
-        border-radius: 10px;
-        padding: 20px;
-        margin: 15px 0;
-        border: 1px solid var(--border);
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
-        transition:
-          transform 0.2s,
-          box-shadow 0.2s,
-          border-color 0.2s;
-      }
+  .section {
+    margin-bottom: 56px;
+    scroll-margin-top: 20px;
+  }
 
-      .card:hover {
-        transform: translateY(-3px);
-        border-color: #ffc27f;
-        box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1);
-      }
+  .section h2 {
+    color: var(--heading);
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 8px;
+  }
 
-      .card h3 {
-        margin-top: 0;
-      }
+  .section h2 i {
+    color: var(--hero);
+    margin-right: 6px;
+  }
 
-      .project-grid {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 18px;
-      }
+  .intro {
+    font-size: 1.05em;
+    max-width: 850px;
+  }
 
-      .project-card {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-      }
+  .card {
+    background: var(--surface);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px 0;
+    border: 1px solid var(--border);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    transition:
+      transform 0.2s,
+      box-shadow 0.2s,
+      border-color 0.2s;
+  }
 
-      .project-card p {
-        flex-grow: 1;
-      }
+  .card:hover {
+    transform: translateY(-3px);
+    border-color: #ffc27f;
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1);
+  }
 
-      .project-meta {
-        margin: -4px 0 10px;
-        color: var(--muted);
-        font-size: 0.9em;
-      }
+  .card h3 {
+    margin-top: 0;
+  }
 
-      .project-links a {
-        color: #233d4d;
-        display: inline-block;
-        margin-right: 12px;
-        margin-top: 6px;
-        font-weight: 600;
-      }
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
 
-      .project-image {
-        width: 100%;
-        border-radius: 8px;
-        margin-bottom: 15px;
-        display: block;
-      }
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
 
-      .skill-tag,
-      .tech-tag {
-        display: inline-block;
-        margin: 4px 4px 4px 0;
-        padding: 5px 10px;
-        background: var(--hero-muted);
-        color: #233d4d;
-        border-radius: 20px;
-        font-size: 0.86em;
-      }
+  .project-card p {
+    flex-grow: 1;
+  }
 
-      .skill-category h3 i {
-        margin-right: 8px;
-        color: var(--accent);
-      }
+  .project-meta {
+    margin: -4px 0 10px;
+    color: var(--muted);
+    font-size: 0.9em;
+  }
 
-      .contact p {
-        margin: 10px 0;
-        font-size: 1.05em;
-      }
+  .project-links a {
+    color: var(--heading);
+    display: inline-block;
+    margin-right: 12px;
+    margin-top: 6px;
+    font-weight: 600;
+  }
 
-      .contact i {
-        margin-right: 10px;
-        color: var(--accent);
-      }
+  .project-links a:hover {
+    color: var(--hero);
+    text-decoration: underline;
+  }
 
-      .note {
-        color: var(--muted);
-        font-size: 0.95em;
-      }
+  .project-links a i {
+    color: inherit;
+  }
 
-      footer {
-        margin-top: 50px;
-        text-align: center;
-        font-size: 0.85em;
-        color: #777;
-        padding: 20px;
-        background: var(--surface);
-        border-top: 1px solid #ddd;
-      }
+  .project-image {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    display: block;
+  }
 
-      @media (max-width: 760px) {
-        .project-grid {
-          grid-template-columns: 1fr;
-        }
+  .skill-tag,
+  .tech-tag {
+    display: inline-block;
+    margin: 4px 4px 4px 0;
+    padding: 5px 10px;
+    background: var(--tag-bg);
+    color: var(--heading);
+    border-radius: 20px;
+    font-size: 0.86em;
+  }
 
-        header h1 {
-          font-size: 2em;
-        }
-      }
+  .skill-category h3 i {
+    margin-right: 8px;
+    color: var(--heading);
+  }
 
-      @media (max-width: 600px) {
-        nav a {
-          margin: 6px;
-        }
-      }
-    </style>
-  </head>
+  .contact p {
+    margin: 10px 0;
+    font-size: 1.05em;
+  }
 
+  .contact i {
+    margin-right: 10px;
+    color: var(--heading);
+  }
+
+  .note {
+    color: var(--muted);
+    font-size: 0.95em;
+  }
+
+  footer {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 0.85em;
+    color: #777;
+    padding: 20px;
+    background: var(--surface);
+    border-top: 1px solid #ddd;
+  }
+
+  @media (max-width: 760px) {
+    .project-grid {
+      grid-template-columns: 1fr;
+    }
+
+    header h1 {
+      font-size: 2em;
+    }
+  }
+
+  @media (max-width: 600px) {
+    nav a {
+      margin: 6px;
+    }
+  }
+</style>
   <body>
     <header>
       <h1>Kashish Sharma</h1>
@@ -771,62 +782,74 @@
             Comparing Photorealism in Game Engines for Synthetic Maritime
             Computer Vision Datasets
           </h3>
+
           <p>
             Comparative study of Unity and Unreal Engine for maritime synthetic
             data generation, including photorealistic scene recreation and
             YOLOv8 segmentation evaluation. Presented at MARESEC 2024.
           </p>
-          <a
-            href="https://zenodo.org/records/14214926"
-            target="_blank"
-            rel="noopener"
-          >
-            <i class="fas fa-external-link-alt"></i> View on Zenodo
-          </a>
-          <a
-            href="https://media.suub.uni-bremen.de/entities/publication/70f317be-e2a7-4057-beee-15f53550e27c"
-            target="_blank"
-            rel="noopener"
-          >
-            <i class="fas fa-external-link-alt"></i> View the Complete Thesis
- 
+
+          <div class="project-links">
+            <a
+              href="https://zenodo.org/records/14214926"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fas fa-external-link-alt"></i> View on Zenodo
+            </a>
+
+            <a
+              href="https://media.suub.uni-bremen.de/entities/publication/70f317be-e2a7-4057-beee-15f53550e27c"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fas fa-external-link-alt"></i> View the Complete Thesis
+            </a>
+          </div>
         </div>
 
         <div class="card">
           <h3>Tiltification — An Accessible App to Popularise Sonification</h3>
+
           <p>
             Research and development contribution to a sensor-driven mobile
             application that uses psychoacoustic sonification to communicate
             device tilt through sound.
           </p>
-          <a
-            href="https://repository.gatech.edu"
-            target="_blank"
-            rel="noopener"
-          >
-            <i class="fas fa-external-link-alt"></i> View the Paper
-          </a>
+
+          <div class="project-links">
+            <a
+              href="https://repository.gatech.edu"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fas fa-external-link-alt"></i> View the Paper
+            </a>
+          </div>
         </div>
 
         <div class="card">
           <h3>
             Implementation of Alcohol and Collision Sensor in a Smart Helmet
           </h3>
+
           <p>
             Technical paper describing a smart helmet prototype for
             motorcyclists integrating alcohol detection, collision sensing, GSM,
             and GPS.
           </p>
-          <a
-            href="https://ieeexplore.ieee.org/document/8945979"
-            target="_blank"
-            rel="noopener"
-          >
-            <i class="fas fa-external-link-alt"></i> View on IEEE Xplore
-          </a>
+
+          <div class="project-links">
+            <a
+              href="https://ieeexplore.ieee.org/document/8945979"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fas fa-external-link-alt"></i> View on IEEE Xplore
+            </a>
+          </div>
         </div>
       </section>
-
       <!-- EDUCATION -->
       <section class="section" id="qualification">
         <h2><i class="fas fa-graduation-cap"></i> Education</h2>
@@ -976,15 +999,6 @@
             target="_blank"
             rel="noopener"
             >LinkedIn</a
-          >
-        </p>
-        <p>
-          <i class="fab fa-github"></i>
-          <a
-            href="https://github.com/kashishs1993"
-            target="_blank"
-            rel="noopener"
-            >GitHub</a
           >
         </p>
         <p class="note">
